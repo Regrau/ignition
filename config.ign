@@ -14,18 +14,6 @@
     ]
   },
   "storage": {
-    "disks": [
-      {
-        "device": "/dev/sda",
-        "partitions": [
-          {
-            "label": "root",
-            "wipePartitionEntry": true
-          }
-        ],
-        "wipeTable": true
-      }
-    ],
     "files": [
       {
         "overwrite": true,
@@ -35,15 +23,6 @@
           "source": "data:,beelink"
         },
         "mode": 420
-      }
-    ],
-    "filesystems": [
-      {
-        "device": "/dev/sda",
-        "format": "ext4",
-        "label": "root",
-        "path": "/mnt/root",
-        "wipeFilesystem": true
       }
     ]
   }
