@@ -1,0 +1,50 @@
+{
+  "ignition": {
+    "version": "3.3.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "name": "core",
+        "noCreateHome": true,
+        "sshAuthorizedKeys": [
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGPA5EB+gNO9vuY0ZIiWUb+ry2dBr4qS5Lehd1Va6HzK regrau@localhost.localdomain"
+        ]
+      }
+    ]
+  },
+  "storage": {
+    "disks": [
+      {
+        "device": "/dev/sda",
+        "partitions": [
+          {
+            "label": "root",
+            "wipePartitionEntry": true
+          }
+        ],
+        "wipeTable": true
+      }
+    ],
+    "files": [
+      {
+        "overwrite": true,
+        "path": "/etc/hostname",
+        "contents": {
+          "compression": "",
+          "source": "data:,beelink"
+        },
+        "mode": 420
+      }
+    ],
+    "filesystems": [
+      {
+        "device": "/dev/sda",
+        "format": "ext4",
+        "label": "root",
+        "path": "/mnt/root",
+        "wipeFilesystem": true
+      }
+    ]
+  }
+}
